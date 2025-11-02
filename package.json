@@ -1,0 +1,22 @@
+{
+  "name": "curso.dev",
+  "version": "1.0.0",
+  "description": "\"# curso.dev\" \r \"# curso.dev\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evertonbalie/curso.dev.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evertonbalie/curso.dev/issues"
+  },
+  "homepage": "https://github.com/evertonbalie/curso.dev#readme",
+  "dependencies": {
+    "next": "^13.1.6"
+  }
+}
