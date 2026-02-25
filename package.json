@@ -2,12 +2,14 @@
   "name": "curso.dev",
   "version": "1.0.0",
   "description": "\"# curso.dev\" \r \"# curso.dev\"",
- 
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-     "dev": "next dev",
+    "test1": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test":"jest",
+    "test:watch":"jest --watch"
+
   },
   "repository": {
     "type": "git",
@@ -21,8 +23,10 @@
   "homepage": "https://github.com/evertonbalie/curso.dev#readme",
   "dependencies": {
     "next": "^13.1.6",
-      "react": "latest",
+    "react": "latest",
     "react-dom": "latest"
+  },
+  "devDependencies": {
+    "jest": "^29.6.2"
   }
 }
-
