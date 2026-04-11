@@ -1,0 +1,37 @@
+01900489210
+
+Maysaeverton@1
+
+91 clinicapromed 3197-6735 end:
+cidade nova
+
+medcare  3347-1838
+allclinic 3351-1022
+
+
+
+
+node install -> .nvmrc usa como padao o que fi definido
+npm init -> licença_MIT - cria  arquivo pack.son
+npm intall next@13.1.6 -> Instalando o NeXt:
+
+
+
+docker compose -f infra/compose.yaml up -d  -- de ditach / rodadno o docke no windows / exit para sair do docker
+
+
+https://www.tabnews.com.br/api/v1/contents
+
+send -  nao entede o chaset
+json - entende o charset
+
+
+curl - para verificar o http no vs cod
+
+API:
+brake change - uri path versioning
+mon brake change - header versioning
+
+fetch - não agurda a resposta - sycrona
+await agurda resposta - assincrona
+

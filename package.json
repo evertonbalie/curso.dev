@@ -4,12 +4,15 @@
   "description": "\"# curso.dev\" \r \"# curso.dev\"",
   "scripts": {
     "test1": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next dev",
+    "dev": "npm run services:up && next dev",
+    "services:up":"docker compose -f infra/compose.yaml up -d",
+    "services:stop":"docker compose -f infra/compose.yaml  stop",
+    "services:down":"docker compose -f infra/compose.yaml  down",
     "build": "next build",
     "start": "next start",
-    "test":"jest",
-    "test:watch":"jest --watch"
-
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+    
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,7 @@
   "homepage": "https://github.com/evertonbalie/curso.dev#readme",
   "dependencies": {
     "next": "^13.1.6",
+    "pg": "^8.11.3",
     "react": "latest",
     "react-dom": "latest"
   },
