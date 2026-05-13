@@ -23,7 +23,7 @@ console.log(responseBody);
 
 expect(responseBody.dependencies.database.version).toEqual("16.0");
 expect(responseBody.dependencies.database.maxima_conexao).toEqual(100);
-expect(responseBody.dependencies.database.conexao_ativas).toEqual(1);
+expect(responseBody.dependencies.database.conexao_ativas).toEqual(2);
 
 
 });

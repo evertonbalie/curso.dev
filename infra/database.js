@@ -1,27 +1,45 @@
 import { Client } from "pg";
 
 async function query(queryObject) {
+
+  // dixei apenas para log didatica
+  console.log("credenciais", {
+    host: process.env.POSTGRES_HOST,
+    port: process.env.POSTGRES_PORT,
+    user: process.env.POSTGRES_USER,
+    database: process.env.POSTGRES_DB,
+    password: process.env.POSTGRES_PASSWORD
+  });
+
+  let client;
+
+  try {
+    client = await getNewClient();
+    const result = await client.query(queryObject);
+    return result;
+
+  } catch (err) {
+    console.error("ERRO NO BANCO:", err);
+    throw err;
+
+  } finally {
+    await client.end();
+  }
+}
+
+
+async function getNewClient() {
+
   const client = new Client({
     host: process.env.POSTGRES_HOST,
     port: process.env.POSTGRES_PORT,
     user: process.env.POSTGRES_USER,
-    database:process.env.POSTGRES_DB,
-    password: process.env.POSTGRES_PASSWORD
+    database: process.env.POSTGRES_DB,
+    password: process.env.POSTGRES_PASSWORD,
+    /* ssl:getSSLValues(), */
   });
-
-  try{
   await client.connect();
-  const result = await client.query(queryObject);
-  /* await client.end(); */
-
-  return result;
-}catch(err){
-console.error("ERRO NO BANCO:", err);
-throw err;
-
-}finally{
-  await client.end()
-}
+  return client;
 }
 
-export default {query:query}
+export default { query, getNewClient }
